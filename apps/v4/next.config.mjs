@@ -53,14 +53,6 @@ const nextConfig = {
       "@remixicon/react",
     ],
   },
-  outputFileTracingIncludes: {
-    "/*": [
-      "./registry/**/*",
-      "./styles/**/*",
-      "./examples/**/*",
-      "./app/**/examples/**/*",
-    ],
-  },
   images: {
     remotePatterns: [
       {

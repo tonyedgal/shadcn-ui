@@ -21,9 +21,10 @@ export function GitHubLink() {
 
 export async function StarsCount() {
   const data = await fetch("https://api.github.com/repos/shadcn-ui/ui", {
+    headers: { "User-Agent": "shadcn-ui" },
     next: { revalidate: 86400 },
   })
-  const json = await data.json()
+  const json = data.ok ? await data.json() : {}
 
   const formattedCount =
     json.stargazers_count >= 1000
